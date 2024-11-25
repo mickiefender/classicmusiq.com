@@ -1,0 +1,264 @@
+/* Shared Styles for All Pages */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f9fa; /* Light Mode Background */
+  width: 100%;
+  transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+}
+
+body.dark-mode {
+  background-color: #121212; /* Dark Mode Background */
+  color: white; /* Dark Mode Text Color */
+}
+
+header {
+  background-color: #244a70;
+  color: #ffffff;
+  padding: 1rem;
+  text-align: center;
+  width: 100%;
+  position: sticky; /* Makes the header sticky */
+  top: 0; /* Sticks the header to the top of the page */
+  z-index: 1000; /* Keeps header above other elements */
+  transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+}
+
+
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+nav ul li a {
+  color: #ffffff;
+  text-decoration: none;
+}
+nav ul li {
+  display: inline;
+  margin-right: 5px;
+}
+
+header.dark-mode {
+  background-color: #1f2d44; /* Dark Mode Header */
+}
+
+nav ul li a {
+  color: #ffffff;
+}
+
+nav ul li a.dark-mode {
+  color: #cfd8dc; /* Light text for Dark Mode */
+}
+
+main {
+  padding: 20px;
+}
+
+h2 {
+  margin-bottom: 1rem;
+}
+
+section {
+  margin-bottom: 2rem;
+}
+
+footer {
+  background-color: #343a40;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+footer.dark-mode {
+  background-color: #1f1f1f; /* Dark Mode Footer */
+}
+
+/* Featured Songs Section Styles */
+#featured-songs {
+  display: grid; /* Use grid layout for featured songs */
+  grid-template-columns: repeat(3, 1fr); /* Display 3 songs per row */
+  gap: 10px; /* Space between grid items */
+}
+
+.featured h2 {
+  color: #200e44; /* Heading color */
+  font-size: 1.8rem; /* Increase font size for visibility */
+  margin-bottom: 1rem; /* Space below heading */
+  text-align: center; /* Center the heading */
+}
+
+.song-item:hover {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15); /* Shadow on hover */
+}
+
+.song-item img {
+  width: 60%; /* Full width for images */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 5px; /* Rounded corners for images */
+}
+
+.song-item h3 {
+  font-size: 1.2rem; /* Font size for song titles */
+  margin: 10px 0 5px; /* Space above and below titles */
+  color: #050303; /* Dark text for contrast */
+}
+
+.song-item p {
+  color: #312a2a; /* Grey text for artist names */
+  margin: 0; /* Remove default margin */
+}
+
+/* Dark Mode Styles for Song Items */
+.song-item.dark-mode {
+  background-color: #1e1e1e; /* Dark Mode Background for Songs */
+  color: white; /* Text color in Dark Mode */
+}
+
+.song-item.dark-mode h3 {
+  color: white; /* Title color in Dark Mode */
+}
+
+.song-item.dark-mode p {
+  color: #b0bec5; /* Lighter text for artist names in Dark Mode */
+}
+
+/* Media Styles */
+@media (max-width: 600px) {
+  #featured-songs {
+    grid-template-columns: repeat(2, 1fr); /* Display 2 songs per row on mobile */
+  }
+}
+
+@media (max-width: 400px) {
+  #featured-songs {
+    grid-template-columns: 1fr; /* Display 1 song per row on very small screens */
+  }
+}
+
+#media-player {
+  position: relative;
+  width: 300px; /* Adjust width as needed */
+}
+
+.media-toggle {
+  background-color: #6200ea; /* Main button color */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.media-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.control-btn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 24px; /* Size of icons */
+  margin: 0 10px;
+  transition: transform 0.3s;
+}
+
+.control-btn:hover {
+  transform: scale(1.1); /* Scale effect on hover */
+}
+
+.control-btn:focus {
+  outline: none; /* Remove outline on focus */
+}
+
+.hidden {
+  display: none;
+}
+
+#expanded-player {
+  display: none;
+  transition: all 0.3s ease;
+}
+
+#expanded-player.active {
+  display: block;
+}
+
+.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+/* Download Button Styling */
+.download-button {
+  padding: 0.3rem 0.8rem;
+  font-size: 0.9rem;
+  background-color: #769543; /* Green background for contrast */
+  color: #fff;
+  border: none;
+  border-radius: 7px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.download-button:hover {
+  background-color: #1b2a1e; /* Darker shade on hover */
+}
+
+/* Dark Mode for Download Button */
+.download-button.dark-mode {
+  background-color: #4CAF50; /* Dark Mode Button Color */
+}
+
+.download-button.dark-mode:hover {
+  background-color: #388E3C; /* Dark Mode Button Hover Color */
+}
+
+/* Optional - For consistency between buttons */
+.song-buttons button,
+.song-buttons .download-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+/* Container for Play and Download buttons */
+.button-container {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-top: 10px;
+}
+
+/* Play Button Styling */
+.play-button {
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  background-color: #007bff; /* Blue background */
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.play-button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Dark Mode for Play Button */
+.play-button.dark-mode {
+  background-color: #375a7f; /* Dark Mode Play Button Color */
+}

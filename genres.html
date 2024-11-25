@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Genres - Classic Musiq</title>
+  <link rel="stylesheet" href="genres.css">
+</head>
+<body>
+  
+
+  <header>
+    <h1>Genres</h1>
+    <nav>
+      <ul  class="nav-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="genres.html">Genres</a></li>
+        <li><a href="artists.html">Artists</a></li>
+        <li><a href="playlists.html">Playlists</a></li>
+        <li><a href="profile.html">My Profile</a></li>
+      </ul>
+    </nav>
+    
+  </header>
+  <!-- Video Background -->
+  <video class="background-video" autoplay loop muted playsinline>
+    <source src="videos/water background.mov" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+ 
+
+  <main>
+    <section class="genres-list">
+      <h2>Select a Genre</h2>
+      <div id="genre-buttons">
+        <button onclick="filterByGenre('All')">All</button>
+        <button onclick="filterByGenre('Afrobeat')">Afrobeat</button>
+        <button onclick="filterByGenre('Amapiano')">Amapiano</button>
+        <button onclick="filterByGenre('R&B')">R&B</button>
+        <button onclick="filterByGenre('Hip Hop')">Hip Hop</button>
+        <button onclick="filterByGenre('Hip Life')">Hip Life</button>
+        <button onclick="filterByGenre('DJ Mix')">DJ Mix</button>
+        <button onclick="filterByGenre('High Life')">High Life</button>
+      </div>
+    </section>
+    
+
+    <section class="genre-songs">
+      <h2>Songs in Selected Genre</h2>
+      <div id="genre-songs">
+        <!-- Songs based on the genre will be dynamically inserted here -->
+      </div>
+      <div id="featured-songs"></div>
+    </section>
+    <div class="pagination-controls">
+      <button id="prev-page" onclick="prevPage()">Previous Page</button>
+      <button id="next-page" onclick="nextPage()">Next Page</button>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Classic Musiq. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

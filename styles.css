@@ -1,0 +1,695 @@
+/* General style for the page */
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #ffffff;
+  background: radial-gradient(circle, #113835 20%, #441d0f 70%, #000 100%);
+  height: 100vh;
+  padding-bottom: 450px;
+ 
+}
+
+/* Header Styling */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 30px;
+  background: transparent;
+}
+
+/* Circular highlight */
+header::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Text and content inside header */
+header h1, header nav {
+  position: relative;
+  z-index: 2;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-list {
+    flex-direction: column;
+    width: 100%;
+    
+  }
+
+  .nav-list a {
+    width: 100%;
+    padding: 0.2rem;
+  }
+
+  #theme-toggle {
+    margin-top: 0.5rem;
+  }
+}
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+nav ul li a {
+  color: #ffffff;
+  text-decoration: none;
+}
+nav ul li {
+  display: inline;
+  margin-right: 5px;
+}
+section {
+  margin-bottom: 2rem;
+}
+
+/* Container for the image with gradient border */
+.image-container {
+  position: relative;
+  width: 250px; /* Adjust size as needed */
+  height: 200px; /* Keep height equal to width for a perfect circle */
+  border-radius: 50%; /* Circular shape */
+  overflow: hidden; /* Ensure the image stays within the circle */
+  margin: 50px auto; /* Center the image */
+  display: flex;
+  margin-right: 30px;
+  margin-bottom: -20px;
+  align-items: center;
+  justify-content: center;
+  background: conic-gradient(
+    from 0deg,
+    #ff5400, /* Starting color of the gradient */
+    #0f5fcd 90%, /* Ending color of the gradient */
+    #ff5400
+  ); /* Circular gradient border */
+}
+
+/* Image styling */
+.image-container img {
+  border-radius: 50%; /* Ensure the image itself is circular */
+  width: 90%; /* Adjust size inside the container */
+  height: 90%; /* Ensure the aspect ratio matches */
+  object-fit: cover; /* Maintain the aspect ratio while covering the space */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4); /* Optional shadow */
+}
+
+
+/* Statistics section */
+.statistics-container {
+  text-align: center;
+  margin-top: 5px;
+  margin-right: 300px;
+}
+
+.statistics-container h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.statistics-container .stat-item {
+  display: inline-block;
+  margin: 10px;
+}
+
+.statistics-container .stat-item p {
+  font-size: 24px;
+  color: #ff6d00;
+}
+
+.statistics-container .stat-item span {
+  display: block;
+  font-size: 16px;
+  color: #ccc;
+}
+@media (max-width : 500px) {
+  .statistics-container{
+    margin: 10px;
+    font-size: 14px;
+  }
+  
+}
+
+
+
+/* Button styling */
+.button {
+  display: inline-block;
+  background-color: #ff5400;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 20px;
+  margin-top: 20px;
+  text-decoration: none;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.button:hover {
+  background-color: #e04e00;
+}
+
+/* Custom gradient text styling */
+.gradient-text {
+  background: linear-gradient(90deg, #ff5400, #0f5fcd);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Responsive Design Adjustments */
+@media (max-width: 508px) {
+  .image-container {
+    width: 100px;
+    height: 100px;
+    margin: 30px auto;
+    margin-left: 260px;
+  }}
+
+/* Container for featured songs */
+.featured-songs-container {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin: 30px auto;
+
+  padding: 20px;
+  border-radius: 10px;
+}
+
+/* Song card styling */
+.song-card {
+  position: relative;
+  width: 280px;
+  height: 210px;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s;
+}
+
+.song-card:hover {
+  transform: scale(1.05);
+}
+
+/* Image styling */
+.song-card img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+
+/* Overlay with gradient */
+.song-card .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.7), transparent);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 15px;
+  color: #fff;
+}
+
+/* Song info */
+.song-card .overlay .details {
+  margin-bottom: 10px;
+}
+
+.song-card .overlay .details p {
+  margin: 0;
+  font-size: 14px;
+  color: #ccc;
+}
+
+.song-card .overlay .details h3 {
+  margin: 5px 0 0;
+  font-size: 18px;
+  color: #fff;
+}
+
+/* Play button */
+.song-card .overlay .play-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: #ffffff;
+  color: #000000;
+  border-radius: 50%;
+  margin-top: 10px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.song-card .overlay .play-button:hover {
+  background-color: #e04e00;
+}
+
+/* Featured Songs Section Styles */
+#featured-songs {
+  display: none; /* Hide the section by default */
+  
+}
+
+#featured-songs.show {
+  display: grid; /* Show the section as a grid when toggled */
+  grid-template-columns: repeat(5, 1fr); /* Display 4 songs per row */
+  gap: 10px; /* Space between grid items */
+  animation: fadeIn 0.5s ease-in-out; /* Apply animation */
+}
+
+.featured h2 {
+  color: #200e44; /* Heading color */
+  font-size: 1.8rem; /* Increase font size for visibility */
+  margin-bottom: 1rem; /* Space below heading */
+  text-align: center; /* Center the heading */
+}
+
+.song-item:hover {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15); /* Shadow on hover */
+}
+
+.song-item img {
+  width: 45%; /* Full width for images */
+  height: 35%; /* Maintain aspect ratio */
+  border-radius: 15px; /* Rounded corners for images */
+}
+
+.song-item h3 {
+  font-size: 1rem; /* Font size for song titles */
+  margin: 10px 0 5px; /* Space above and below titles */
+  color: #ffffff; /* Dark text for contrast */
+}
+
+.song-item p {
+  color: #ffffff; /* Grey text for artist names */
+  margin: 0; /* Remove default margin */
+}
+
+/* Dark Mode Styles for Song Items */
+.song-item.dark-mode {
+  background-color: #1e1e1e; /* Dark Mode Background for Songs */
+  color: white; /* Text color in Dark Mode */
+}
+
+.song-item.dark-mode h3 {
+  color: white; /* Title color in Dark Mode */
+}
+
+.song-item.dark-mode p {
+  color: #b0bec5; /* Lighter text for artist names in Dark Mode */
+}
+
+/* Media Styles */
+@media (max-width: 1100px) {
+  #featured-songs.show {
+    grid-template-columns: repeat(3, 1fr); /* Display 3 songs per row on tablets */
+  }
+@media (max-width: 600px) {
+  #featured-songs.show {
+    grid-template-columns: repeat(2, 1fr); /* Display 2 songs per row on mobile */
+  }
+}
+ 
+   /* Optional - further adjustments for very small screens */
+   @media (max-width: 400px) {
+    #featured-songs.show {
+      grid-template-columns: 1fr; /* Display 1 song per row on very small screens */
+    }
+  }
+}
+.featured {
+  padding: 15px; /* Reduce padding for smaller screens */
+  
+}
+
+.featuredT {
+  font-size: 1rem; /* Slightly smaller heading */
+  
+  
+}
+
+.song-item {
+  padding: 8px; /* Reduce padding inside song items */
+}
+
+.song-item h3 {
+  font-size: 1rem; /* Smaller font size for song titles */
+}
+
+
+ .media-player-container {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            z-index: 1000;
+            align-items: center;
+        }
+        .media-controls {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+        .media-controls button {
+            background-color: #555;
+            border: none;
+            color: #fff;
+            padding: 10px;
+            cursor: pointer;
+            
+    
+        }
+        .media-controls button:hover {
+            background-color: #777;
+        }
+        
+      
+
+/* Download Button Styling */
+.download-button {
+  padding: 0.3rem 0.8rem;
+  font-size: 0.9rem;
+  background-color: #769543; /* Green background for contrast */
+  color: #fff;
+  border: none;
+  border-radius: 7px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.download-button:hover {
+  background-color: #1b2a1e; /* Darker shade on hover */
+}
+
+/* Dark Mode for Download Button */
+.download-button.dark-mode {
+  background-color: #4CAF50; /* Dark Mode Button Color */
+}
+
+.download-button.dark-mode:hover {
+  background-color: #388E3C; /* Dark Mode Button Hover Color */
+}
+
+/* Optional - For consistency between buttons */
+.song-buttons button,
+.song-buttons .download-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+/* Container for Play and Download buttons */
+.button-container {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-top: 10px;
+}
+
+/* Play Button Styling */
+.play-button {
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  background-color: #007bff; /* Blue background */
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.play-button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Dark Mode for Play Button */
+.play-button.dark-mode {
+  background-color: #375a7f; /* Dark Mode Play Button Color */
+}
+
+
+
+.pagination-controls {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.pagination-controls button {
+  background-color: #d63384;
+  color: white;
+  padding: 8px 12px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.pagination-controls button:hover {
+  background-color: #b12c6b;
+}
+
+.pagination-controls button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Available Songs Button Styles */
+#toggle-songs-btn {
+  display: inline-block;
+  background-color: #4CAF50; /* Green background */
+  color: white; /* White text */
+  padding: 10px 20px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s; /* Smooth transition */
+}
+
+#toggle-songs-btn::before {
+  content: '🎵 '; /* Add a music note icon before the text */
+}
+
+/* Hover Effect */
+#toggle-songs-btn:hover {
+  background-color: #45a049; /* Darker green */
+  transform: scale(1.1); /* Slightly larger */
+}
+
+/* Active/Click Effect */
+#toggle-songs-btn:active {
+  transform: scale(1.4); /* Slightly smaller */
+}
+
+/* Fade-in Animation for Songs Section */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* Footer Styling */
+footer {
+  background: linear-gradient(135deg, #5c2416, #0c0f2b);
+  padding: 40px 20px;
+  text-align: center;
+  position: relative;
+  color: #ffffff;
+  box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer circular highlight */
+footer::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.1), transparent);
+  border-radius: 50%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Styling for links in the footer */
+footer a {
+  color: #f5a623;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+
+footer a:hover {
+  color: #ffffff;
+}
+
+
+
+.concert-section {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.concert-section h3 {
+  font-size: 25px;
+  color: #0077ff;
+  margin-bottom: 20px;
+}
+
+.concert-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.concert-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+  transition: transform 0.3s ease;
+}
+
+.concert-card:hover {
+  transform: translateY(-10px);
+}
+
+.concert-cover {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 200px;
+}
+
+.concert-cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease, filter 0.5s ease;
+}
+
+.concert-card:hover img {
+  transform: scale(1.1); /* Zoom-in effect */
+  filter: brightness(80%);
+}
+
+.concert-info {
+  padding: 20px;
+  text-align: left;
+}
+
+.concert-info h3 {
+  font-size: 20px;
+  margin: 0 0 10px;
+}
+
+.concert-info p {
+  font-size: 16px;
+  margin: 0 0 5px;
+}
+
+.concert-info .date {
+  color: #ff5400;
+  font-weight: bold;
+}
+
+.concert-info .location {
+  color: #0f5fcd;
+}
+
+.button {
+  display: inline-block;
+  background-color: #ff5400;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-size: 14px;
+  margin-top: 10px;
+  transition: background-color 0.3s;
+}
+
+.button:hover {
+  background-color: #e04e00;
+}
+
+
+.event-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.event-header i {
+  font-size: 30px;
+  color: #ff5400;
+}
+
+.event-header h2 {
+  font-size: 24px;
+  color: #8a7171;
+}
+.header .logo {
+  font-size: 24px;
+  font-weight: bold;
+
+}
+
+/* Account Icon Styling */
+.header .loginsize img {
+  width: 60px; /* Adjust icon size */
+  height: 60px;
+  border-radius: 50%; /* Circular icon (optional) */
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.header .loginsize img:hover {
+  transform: scale(1.1); /* Slight zoom effect */
+  box-shadow: 0px 4px 10px rgba(202, 196, 196, 0.2);
+}
+
+.header .loginsize {
+  text-decoration: none;
+}

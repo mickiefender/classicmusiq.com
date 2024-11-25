@@ -1,0 +1,472 @@
+/* Shared Styles for All Pages */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f9fa;
+  width: 100%;
+  
+}
+
+header {
+  background-color: #244a70;
+  color: #ffffff;
+  padding: 1rem;
+  text-align: center;
+  width: 100%;
+  position: sticky; /* Makes the header sticky */
+  top: 0; /* Sticks the header to the top of the page */
+  z-index: 1000; /* Keeps header above other elements */
+  transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+}
+.nav-list a {
+  text-decoration: none;
+  color: #ffffff;
+  border-radius: 25px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-list a:hover {
+  background-color: #000000; /* Darker shade for hover */
+  color: #cfd8dc;
+}
+
+/* Button in Navigation */
+#theme-toggle {
+  background: #1f3c59; /* Match the hover color of links */
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+#theme-toggle:hover {
+  background: #1a3149;
+}
+/* Active Link */
+.nav-list a.active {
+  background-color: #1a3149;
+  color: #cfd8dc;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-list {
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 100%;
+    
+  }
+
+  .nav-list a {
+    width: 100%;
+    padding: 0.5rem;
+  }
+
+  #theme-toggle {
+    margin-top: 0.5rem;
+  }
+}
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 5px;
+}
+
+nav ul li a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+main {
+  padding: 20px;
+}
+
+h2 {
+  margin-bottom: 1rem;
+}
+
+section {
+  margin-bottom: 2rem;
+}
+
+footer {
+  background-color: #343a40;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+/* Featured Songs Section Styles */
+#featured-songs {
+  display: grid; /* Use grid layout for featured songs */
+  grid-template-columns: repeat(4, 1fr); /* Display 4 songs per row */
+  gap: 10px; /* Space between grid items */
+}
+
+.featured h2 {
+  color: #200e44; /* Heading color */
+  font-size: 1.8rem; /* Increase font size for visibility */
+  margin-bottom: 1rem; /* Space below heading */
+  text-align: center; /* Center the heading */
+}
+
+
+
+.song-item:hover {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15); /* Shadow on hover */
+}
+
+.song-item img {
+  width: 55%; /* Full width for images */
+  height: 40%; /* Maintain aspect ratio */
+  border-radius: 5px; /* Rounded corners for images */
+}
+
+.song-item h3 {
+  font-size: 1.2rem; /* Font size for song titles */
+  margin: 10px 0 5px; /* Space above and below titles */
+  color: #f6f6f6; /* Dark text for contrast */
+}
+
+
+.song-item p {
+  color: #dfdbdb; /* Grey text for artist names */
+  margin: 0; /* Remove default margin */
+}
+
+/* Media Styles */
+@media (max-width: 1200px) {
+  #featured-songs {
+    grid-template-columns: repeat(3, 1fr); /* Display 3 songs per row on mobile */
+  }
+}
+@media (max-width: 600px) {
+  #featured-songs {
+    grid-template-columns: repeat(2, 1fr); /* Display 2 songs per row on mobile */
+  }
+   /* Optional - further adjustments for very small screens */
+   @media (max-width: 400px) {
+    #featured-songs {
+      grid-template-columns: 1fr; /* Display 1 song per row on very small screens */
+    }
+  }
+}
+
+
+  .featured {
+    padding: 15px; /* Reduce padding for smaller screens */
+  }
+
+  .featured h2 {
+    font-size: 1.5rem; /* Slightly smaller heading */
+  }
+
+  .song-item {
+    padding: 8px; /* Reduce padding inside song items */
+  }
+
+  .song-item h3 {
+    font-size: 1rem; /* Smaller font size for song titles */
+  }
+
+
+
+/* Media Player Controls within Featured Section */
+.player-controls {
+  display: flex; /* Flexbox for controls */
+  justify-content: center; /* Center controls */
+  margin-top: 10px; /* Space above controls */
+}
+
+.player-controls button {
+  background-color: #007bff; /* Button color */
+  color: white; /* Button text color */
+  border: none; /* Remove border */
+  padding: 10px 15px; /* Padding around buttons */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor */
+  transition: background-color 0.3s; /* Smooth background transition */
+}
+
+.player-controls button:hover {
+  background-color: #0056b3; /* Darker shade on hover */
+}
+
+/* Mobile Styles */
+@media (max-width: 600px) {
+  .featured {
+    padding: 15px; /* Reduce padding for smaller screens */
+  }
+
+  .featured h2 {
+    font-size: 1.5rem; /* Slightly smaller heading */
+  }
+
+  #featured-songs {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Smaller items for mobile */
+  }
+
+  .song-item {
+    padding: 8px; /* Reduce padding inside song items */
+  }
+
+  .song-item h3 {
+    font-size: 1rem; /* Smaller font size for song titles */
+  }
+
+  .player-controls button {
+    padding: 8px 10px; /* Reduce button padding for smaller screens */
+  }
+}
+/* Download Button Styling */
+.download-button {
+  padding: 0.2rem 0.3rem;
+  font-size: 0.9rem;
+  background-color: #769543; /* Green background for contrast */
+  color: #fff;
+  border: none;
+  border-radius: 7px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.download-button:hover {
+  background-color: #1b2a1e; /* Darker shade on hover */
+}
+
+/* Optional - For consistency between buttons */
+.song-buttons button,
+.song-buttons .download-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.download-button:before {
+  content: '⬇️'; /* Optional icon for download */
+  margin-right: 4px;
+}
+
+
+/* Genre List Section */
+.genres-list {
+  text-align: center; /* Center the heading and buttons */
+  margin: 20px 0; /* Space above and below the section */
+}
+
+/* Genre Buttons Container */
+#genre-buttons {
+  display: flex; /* Use flexbox for layout */
+  flex-wrap: wrap; /* Allow buttons to wrap to the next line */
+  justify-content: center; /* Center the buttons */
+  margin-top: 10px; /* Space above the buttons */
+}
+
+/* Individual Genre Button */
+#genre-buttons button {
+  background-color: #007bff; /* Blue background */
+  color: white; /* White text */
+  border: none; /* Remove border */
+  border-radius: 5px; /* Rounded corners */
+  padding: 10px 15px; /* Padding around the button */
+  margin: 5px; /* Space between buttons */
+  font-size: 1rem; /* Font size */
+  cursor: pointer; /* Pointer cursor */
+  transition: background-color 0.3s, transform 0.2s; /* Smooth transition */
+}
+
+/* Hover Effect for Genre Buttons */
+#genre-buttons button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+  transform: translateY(-2px); /* Slight lift on hover */
+}
+
+/* Active Button State */
+#genre-buttons button.active {
+  background-color: #111e2b; /* Active button color */
+  transform: scale(1.05); /* Slightly larger */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Shadow effect */
+}
+/* Media Queries for Mobile Devices */
+@media (max-width: 600px) {
+  #genre-buttons button {
+    padding: 0.4rem 0.8rem; /* Smaller padding */
+    font-size: 0.9rem; /* Smaller font size */
+    margin: 3px; /* Reduced margin */
+  }
+}
+
+/*edit of the artist.html */
+.artist-img {
+  width: 60px; /* Adjust as needed */
+  height: 60px;
+  vertical-align: middle; /* Aligns image with text */
+  border-radius: 19px;
+}
+
+/* Full-screen video background styling */
+.background-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1; /* Behind other content */
+}
+
+/* Ensure content remains readable over the video */
+body {
+  position: relative;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5); /* Fallback background */
+  overflow-x: hidden; /* Prevent horizontal scroll */
+}
+/* Video Background within Main Content */
+.main-content-with-video {
+  position: relative;
+  overflow: hidden;
+}
+/* Optional overlay to enhance contrast */
+.video-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4); /* Slightly dark overlay */
+  z-index: 0;
+}
+.video-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.background-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: blur(0.5px) brightness(0.8); /* Blur and slightly darken the video */
+}
+
+/* Optional Header and Main Content Styling */
+header, main, footer {
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent background for readability */
+  padding: 10px;
+  border-radius: 8px;
+  width: 100%;
+}
+
+/* Header and Footer Styling */
+header {
+  background-image: url('background img/concert footer img.jpg'); /* Replace with your image path */
+  background-size: cover; /* Ensures the image covers the entire header */
+  color: white;
+  background-position: center; /* Centers the image */
+  text-align: center;
+  width: 100%;
+  z-index: 2; /* Ensure it stays above video background */
+  
+}
+
+footer {
+  background-image: url('background img/backgroung header img.jpg'); /* Replace with your image path */
+  background-size: cover; /* Ensures the image covers the entire header */
+  color: white;
+  text-align: center;
+  width: 100%;
+  height: 100px;
+  z-index: 2; /* Ensure it stays above video background */
+
+}
+
+/* About Developer Page Styles */
+#about-developer {
+  background-color: #f9f9f9;
+  padding: 50px;
+  text-align: center;
+}
+
+.developer-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.developer-image {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  margin-right: 30px;
+  border: 3px solid #333;
+}
+
+.developer-details {
+  text-align: left;
+  max-width: 600px;
+}
+
+.developer-videos {
+  margin-top: 30px;
+}
+
+.video-container {
+  margin: 15px 0;
+}
+
+footer {
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+
+.pagination-controls {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.pagination-controls button {
+  background-color: #d63384;
+  color: white;
+  padding: 8px 12px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.pagination-controls button:hover {
+  background-color: #b12c6b;
+}
+
+.pagination-controls button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}

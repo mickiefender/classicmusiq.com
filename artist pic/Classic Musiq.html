@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<!-- saved from url=(0032)http://127.0.0.1:5500/index.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Classic Musiq</title>
+  <link rel="stylesheet" href="./Classic Musiq_files/styles.css">
+  <script defer="" src="./Classic Musiq_files/script.js"></script>
+</head>
+<body class="">
+  <!-- Header with Search Bar and Navigation -->
+  <header>
+    <div class="logo">
+      <h1>Classic Musiq</h1>
+    </div>
+    <div class="search-bar">
+      <input type="text" id="search" placeholder="Search by title, artist, or album...">
+      <button onclick="searchSongs()" class="">Search</button>
+      
+
+    </div>
+    <nav>
+      <ul>
+        <li><a href="http://127.0.0.1:5500/index.html">Home</a></li>
+        <li><a href="http://127.0.0.1:5500/genres.html">Genres</a></li>
+        <li><a href="http://127.0.0.1:5500/artists.html">Artists</a></li>
+        <li><a href="http://127.0.0.1:5500/playlists.html">Playlists</a></li>
+        <li><a href="http://127.0.0.1:5500/profile.html">My Profile</a></li>
+        <button id="theme-toggle" class=""><img src="./Classic Musiq_files/toggles.svg" alt=""></button>
+      </ul>
+     
+    </nav>
+    
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <!-- Placeholder for Homepage Sections -->
+    <section class="featured">
+      <h2>Available Songs</h2>
+      <div id="featured-songs"><div class="song-item">
+      <img data-src="album art/go gaaga cover pic.jpg" alt="Album Art" class="" src="./Classic Musiq_files/go gaaga cover pic.jpg">
+      <h3>Go Gaaga</h3>
+      <p>Afriyie Wutah ft Sarkodie</p>
+      <button onclick="playSong(&#39;classic songs/Afriyie Wutah Go Gaaga ft Sarkodie.mp3&#39;, &#39;Go Gaaga&#39;, &#39;Afriyie Wutah ft Sarkodie&#39;, &#39;album art/go gaaga cover pic.jpg&#39;)" class="">Play</button>
+      <a href="http://127.0.0.1:5500/classic%20songs/Afriyie%20Wutah%20Go%20Gaaga%20ft%20Sarkodie.mp3" download="" class="download-button">Download</a>
+    </div><div class="song-item">
+      <img data-src="album art/the vilian i never was cover pic.jpeg" alt="Album Art" class="" src="./Classic Musiq_files/the vilian i never was cover pic.jpeg">
+      <h3>Kilos Milos</h3>
+      <p>Black Sherif</p>
+      <button onclick="playSong(&#39;classic songs/Black Sherif Kilos Milos.mp3&#39;, &#39;Kilos Milos&#39;, &#39;Black Sherif&#39;, &#39;album art/the vilian i never was cover pic.jpeg&#39;)" class="">Play</button>
+      <a href="http://127.0.0.1:5500/classic%20songs/Black%20Sherif%20Kilos%20Milos.mp3" download="" class="download-button">Download</a>
+    </div><div class="song-item">
+      <img data-src="album art/favorite song king promise cover pic.webp" alt="Album Art" class="" src="./Classic Musiq_files/favorite song king promise cover pic.webp">
+      <h3>favorite story</h3>
+      <p>King Promise ft Sarkodie ft Olivetheboy</p>
+      <button onclick="playSong(&#39;classic songs/King Promise Favourite Story ft Sarkodie &amp;Olivetheboy.mp3&#39;, &#39;favorite story&#39;, &#39;King Promise ft Sarkodie ft Olivetheboy&#39;, &#39;album art/favorite song king promise cover pic.webp&#39;)" class="">Play</button>
+      <a href="http://127.0.0.1:5500/classic%20songs/King%20Promise%20Favourite%20Story%20ft%20Sarkodie%20&amp;Olivetheboy.mp3" download="" class="download-button">Download</a>
+    </div><div class="song-item">
+      <img data-src="cover pics/Epixode-Atia-Folk-Rendition-Cover.jpg" alt="Album Art" class="" src="./Classic Musiq_files/Epixode-Atia-Folk-Rendition-Cover.jpg">
+      <h3>Atia</h3>
+      <p>Epixode ft Abiana</p>
+      <button onclick="playSong(&#39;classic songs/Abiana ft botri on Atia by Epixode folk rendition.mp3&#39;, &#39;Atia&#39;, &#39;Epixode ft Abiana&#39;, &#39;cover pics/Epixode-Atia-Folk-Rendition-Cover.jpg&#39;)" class="">Play</button>
+      <a href="http://127.0.0.1:5500/classic%20songs/Abiana%20ft%20botri%20on%20Atia%20by%20Epixode%20folk%20rendition.mp3" download="" class="download-button">Download</a>
+    </div><div class="song-item">
+      <img data-src="cover pics/Adina Jeje cover pic.jpeg" alt="Album Art" class="" src="./Classic Musiq_files/Adina Jeje cover pic.jpeg">
+      <h3>JeJe</h3>
+      <p>Adina</p>
+      <button onclick="playSong(&#39;classic songs/Adina Jeje.mp3&#39;, &#39;JeJe&#39;, &#39;Adina&#39;, &#39;cover pics/Adina Jeje cover pic.jpeg&#39;)" class="">Play</button>
+      <a href="http://127.0.0.1:5500/classic%20songs/Adina%20Jeje.mp3" download="" class="download-button">Download</a>
+    </div><div class="song-item">
+      <img data-src="cover pics/Abochie bestie cover pic.jpeg" alt="Album Art" class="" src="./Classic Musiq_files/Abochie bestie cover pic.jpeg">
+      <h3>Bestie</h3>
+      <p>Abochi</p>
+      <button onclick="playSong(&#39;classic songs/Abochi Bestie.mp3&#39;, &#39;Bestie&#39;, &#39;Abochi&#39;, &#39;cover pics/Abochie bestie cover pic.jpeg&#39;)" class="">Play</button>
+      <a href="http://127.0.0.1:5500/classic%20songs/Abochi%20Bestie.mp3" download="" class="download-button">Download</a>
+    </div><div class="song-item">
+      <img data-src="cover pics/Adina take care cover pic.jpeg" alt="Album Art" class="" src="./Classic Musiq_files/Adina take care cover pic.jpeg">
+      <h3>Take care of you</h3>
+      <p>Adina ft Stonebwoy </p>
+      <button onclick="playSong(&#39;classic songs/Adina Take care of you.mp3&#39;, &#39;Take care of you&#39;, &#39;Adina ft Stonebwoy &#39;, &#39;cover pics/Adina take care cover pic.jpeg&#39;)" class="">Play</button>
+      <a href="http://127.0.0.1:5500/classic%20songs/Adina%20Take%20care%20of%20you.mp3" download="" class="download-button">Download</a>
+    </div><div class="song-item">
+      <img data-src="cover pics/Adina why cover pic.jpeg" alt="Album Art" class="" src="./Classic Musiq_files/Adina why cover pic.jpeg">
+      <h3>Why</h3>
+      <p>Adina</p>
+      <button onclick="playSong(&#39;classic songs/Adina Why.mp3&#39;, &#39;Why&#39;, &#39;Adina&#39;, &#39;cover pics/Adina why cover pic.jpeg&#39;)" class="">Play</button>
+      <a href="http://127.0.0.1:5500/classic%20songs/Adina%20Why.mp3" download="" class="download-button">Download</a>
+    </div><div class="song-item">
+      <img data-src="cover pics/Akwaboah posti me cover pic.jpeg" alt="Album Art" class="" src="./Classic Musiq_files/Akwaboah posti me cover pic.jpeg">
+      <h3>Posti me</h3>
+      <p>Akwaboah</p>
+      <button onclick="playSong(&#39;classic songs/Akwaboah posti me.mp3&#39;, &#39;Posti me&#39;, &#39;Akwaboah&#39;, &#39;cover pics/Akwaboah posti me cover pic.jpeg&#39;)" class="">Play</button>
+      <a href="http://127.0.0.1:5500/classic%20songs/Akwaboah%20posti%20me.mp3" download="" class="download-button">Download</a>
+    </div><div class="song-item">
+      <img data-src="cover pics/Beyouce Already cover pic.jpeg" alt="Album Art" class="" src="./Classic Musiq_files/Beyouce Already cover pic.jpeg">
+      <h3>Alreday</h3>
+      <p>Beyonce ft Shatta Wale</p>
+      <button onclick="playSong(&#39;classic songs/Beyonce ft Shatta Wale Already.mp3&#39;, &#39;Alreday&#39;, &#39;Beyonce ft Shatta Wale&#39;, &#39;cover pics/Beyouce Already cover pic.jpeg&#39;)" class="">Play</button>
+      <a href="http://127.0.0.1:5500/classic%20songs/Beyonce%20ft%20Shatta%20Wale%20Already.mp3" download="" class="download-button">Download</a>
+    </div><div class="song-item">
+      <img data-src="cover pics/up and awake cojo cue cover pic.jpeg" alt="Album Art" class="" src="./Classic Musiq_files/up and awake cojo cue cover pic.jpeg">
+      <h3>Up and awake</h3>
+      <p>Cojo Cue ftKwesi Arthur</p>
+      <button onclick="playSong(&#39;classic songs/Up &amp; Awake kwesi Arthur.mp3&#39;, &#39;Up and awake&#39;, &#39;Cojo Cue ftKwesi Arthur&#39;, &#39;cover pics/up and awake cojo cue cover pic.jpeg&#39;)" class="">Play</button>
+      <a href="http://127.0.0.1:5500/classic%20songs/Up%20&amp;%20Awake%20kwesi%20Arthur.mp3" download="" class="download-button">Download</a>
+    </div><div class="song-item">
+      <img data-src="cover pics/Amg Armani Allowed cover pic.jpeg" alt="Album Art" class="" src="./Classic Musiq_files/Amg Armani Allowed cover pic.jpeg">
+      <h3>Allowed</h3>
+      <p>Amg Armani ft quamina Mp ft Medikal</p>
+      <button onclick="playSong(&#39;classic songs/Amg Armani Allowed ft Quamina MP &amp; Medikal.mp3&#39;, &#39;Allowed&#39;, &#39;Amg Armani ft quamina Mp ft Medikal&#39;, &#39;cover pics/Amg Armani Allowed cover pic.jpeg&#39;)" class="">Play</button>
+      <a href="http://127.0.0.1:5500/classic%20songs/Amg%20Armani%20Allowed%20ft%20Quamina%20MP%20&amp;%20Medikal.mp3" download="" class="download-button">Download</a>
+    </div><div class="song-item">
+      <img data-src="cover pics/Amerado Lyrical Josephine.jpeg" alt="Album Art" class="" src="./Classic Musiq_files/Amerado Lyrical Josephine.jpeg">
+      <h3>Lyrical Josephine</h3>
+      <p>Amerado</p>
+      <button onclick="playSong(&#39;classic songs/Amerado Lyrical Josephine.mp3&#39;, &#39;Lyrical Josephine&#39;, &#39;Amerado&#39;, &#39;cover pics/Amerado Lyrical Josephine.jpeg&#39;)" class="">Play</button>
+      <a href="http://127.0.0.1:5500/classic%20songs/Amerado%20Lyrical%20Josephine.mp3" download="" class="download-button">Download</a>
+    </div><div class="song-item">
+      <img data-src="cover pics/Amerado kyibom cover pic.jpeg" alt="Album Art" class="" src="./Classic Musiq_files/Amerado kyibom cover pic.jpeg">
+      <h3>Kyibom free hype</h3>
+      <p>Amerado</p>
+      <button onclick="playSong(&#39;classic songs/Amerado Kyibom free hype.mp3&#39;, &#39;Kyibom free hype&#39;, &#39;Amerado&#39;, &#39;cover pics/Amerado kyibom cover pic.jpeg&#39;)" class="">Play</button>
+      <a href="http://127.0.0.1:5500/classic%20songs/Amerado%20Kyibom%20free%20hype.mp3" download="" class="download-button">Download</a>
+    </div></div>
+    </section>
+
+    
+    
+
+    <!-- Media Player -->
+    <section id="media-player">
+      <h2>Now Playing</h2>
+      <div id="player-controls">
+        <audio id="audio-player" controls=""></audio>
+        <div class="media-buttons">
+          <button id="prev-btn" class="">Prev</button>
+          <button id="play-pause-btn" class="">Play</button>
+          <button id="next-btn" class="">Next</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="social-links">
+      <!-- Add Social Media Icons Here -->
+      <a href="https://www.facebook.com/">Facebook</a>
+      <a href="https://www.twitter.com/">Twitter</a>
+      <a href="https://www.instagram.com/">Instagram</a>
+    </div>
+    <p>© 2024 Classic Musiq. All rights reserved.</p>
+  </footer>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+
+</body></html>
