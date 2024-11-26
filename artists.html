@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Artists - Classic Musiq</title>
+  <link rel="stylesheet" href="genres.css">
+</head>
+<body>
+  <header>
+    <h1>Artists</h1>
+    <nav>
+      <ul  class="nav-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="genres.html">Genres</a></li>
+        <li><a href="artists.html">Artists</a></li>
+        <li><a href="playlists.html">Playlists</a></li>
+        <li><a href="profile.html">My Profile</a></li>
+      </ul>
+    </nav>
+    <div class="search-bar">
+      <input type="text" id="search" placeholder="Search by title, artist, or album..." />
+      <button onclick="searchSongs()">Search</button>
+    </div>
+  </header>
+  <!-- Video Background -->
+  <video class="background-video" autoplay loop muted playsinline>
+    <source src="videos/music background.mov" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  
+
+  <main>
+    <section class="artist-list">
+      <h2>Select an Artist</h2>
+      <div id="artist-buttons">
+          <button onclick="filterByArtist('All')" class="active">All</button>
+          
+          
+          <!-- Wrapping the artist image in an anchor tag for clickability -->
+          <a href="#" onclick="filterByArtist('Black Sherif'); return false;" class="artist-link">
+              <img src="artist pic/Black-Sherif.webp" alt="Black Sherif" class="artist-img" >
+          </a>
+
+          <a href="#" onclick="filterByArtist('King Promise ft Sarkodie ft Olivetheboy'); return false;" class="artist-link">
+            <img src="artist pic/king promise pic.jpg" alt="King Promise" class="artist-img">
+        </a>
+
+        </a>
+        <a href="#" onclick="filterByArtist('Shatta Wale'); return false;" class="artist-link">
+          <img src="artist pic/Shatta-Wale.webp" alt="Shatta Wale" class="artist-img">
+      </a>
+      <a href="#" onclick="filterByArtist('Davido'); return false;" class="artist-link">
+        <img src="artist pic/Davido.webp" alt="Davido" class="artist-img">
+    </a>
+
+      <a href="#" onclick="filterByArtist('Kwesi Arthur'); return false;" class="artist-link">
+        <img src="artist pic/kwesi Arthur.png" alt="Kwesi Arthur" class="artist-img">
+      </a>
+          <a href="#" onclick="filterByArtist('Afriyie Wutah ft Sarkodie'); return false;" class="artist-link">
+            <img src="artist pic/afriyie wutah pic.jpeg" alt="Afriyie Wutah" class="artist-img">
+        </a>
+
+        <a href="#" onclick="filterByArtist('Bisa Kdei'); return false;" class="artist-link">
+          <img src="artist pic/Bisa Kdei.webp" alt="Bisa Kdei" class="artist-img">
+      </a>
+       
+      <a href="#" onclick="filterByArtist('Abochi'); return false;" class="artist-link">
+        <img src="artist pic/Abochi.jpg" alt="Abochi" class="artist-img">
+    </a>
+
+    <a href="#" onclick="filterByArtist('DarkoVibes'); return false;" class="artist-link">
+      <img src="artist pic/DarkoVibes.jpeg" alt="DarkoVibes" class="artist-img">
+  </a>
+    <a href="#" onclick="filterByArtist('Adina'); return false;" class="artist-link">
+      <img src="artist pic/Adina.jpeg" alt="Adina" class="artist-img">
+  </a>
+  <a href="#" onclick="filterByArtist('Akwaboah'); return false;" class="artist-link">
+    <img src="artist pic/Akwaboah.jpg" alt="Akwaboah" class="artist-img">
+</a>
+<a href="#" onclick="filterByArtist('Amerado'); return false;" class="artist-link">
+  <img src="artist pic/amerado.jpg" alt="Amerado" class="artist-img">
+</a>
+<a href="#" onclick="filterByArtist('Armani'); return false;" class="artist-link">
+  <img src="artist pic/Amg Armani.jpeg" alt="Armani" class="artist-img">
+</a>
+</a>
+<a href="#" onclick="filterByArtist('Epixode'); return false;" class="artist-link">
+  <img src="artist pic/Epixode.jpg" alt="Epixode" class="artist-img">
+</a>
+</a>
+
+      </div>
+  </section>
+
+  <div id="featured-songs"></div>
+  <audio id="audio-player" controls></audio>
+    
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Classic Musiq. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
